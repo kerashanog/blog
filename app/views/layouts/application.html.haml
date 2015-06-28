@@ -1,0 +1,21 @@
+!!! 5
+%html
+  %head
+    %title Blog
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    #notice_wrapper
+      - flash.each do |name, msg|
+        = content_tag(:div, msg, class: "alert alert-#{name}")
+        
+    %nav.menu
+      = link_to "New Post", new_post_path, class: 'button'
+        
+    %header
+      = link_to root_path, class: 'portrait' do
+        = image_tag 'logo.jpg'
+      %h1.title= link_to 'Keras', root_path
+    #posts
+      = yield

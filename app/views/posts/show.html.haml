@@ -1,7 +1,14 @@
-%h1= @post.title
-%p
-  Submitted
-  = time_ago_in_words(@post.created_at)
-  ago.
-  
-%p= @post.body
+.post.text
+  .post-date
+    = link_to @post do
+      = @post.created_at.strftime("%b %d")
+      %br
+      = @post.created_at.strftime("%Y")
+  %h3= link_to @post.title, @post
+  %p.post-time
+    Submitted
+    = time_ago_in_words(@post.created_at)
+    ago.
+    
+  %p= @post.body
+  %footer.clearfix

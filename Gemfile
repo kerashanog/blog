@@ -48,3 +48,6 @@ gem 'haml', '~> 4.0.6'
 
 # Forms made easy!
 gem 'simple_form', '~> 3.1.0'
+
+#Twitter's Bootstrap, converted to Sass  and ready to drop into Rails or Compass
+gem 'bootstrap-sass', '~> 3.3.5.1'
