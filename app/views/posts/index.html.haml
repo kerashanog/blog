@@ -7,6 +7,6 @@
         %br
         = post.created_at.strftime("%Y")
     %h3= link_to post.title, post
-    %p= post.body
+    = markdown(post.body)
   %footer.clearfix
     

@@ -51,3 +51,9 @@ gem 'simple_form', '~> 3.1.0'
 
 #Twitter's Bootstrap, converted to Sass  and ready to drop into Rails or Compass
 gem 'bootstrap-sass', '~> 3.3.5.1'
+
+#A fast, safe and extensible Markdown to (X)HTML parser
+gem 'redcarpet', '~> 3.3.2'
+
+#Fast and easy syntax highlighting for selected languages, written in Ruby. Comes with RedCloth integration and LOC counter.
+gem 'coderay', '~> 1.1.0'
