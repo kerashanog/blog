@@ -10,12 +10,4 @@
       - flash.each do |name, msg|
         = content_tag(:div, msg, class: "alert alert-#{name}")
         
-    %nav.menu
-      = link_to "New Post", new_post_path, class: 'button'
-      
-    %header
-      = link_to root_path, class: 'portrait' do
-        = image_tag 'logo.jpg'
-      %h1.title= link_to 'Keras', root_path
-    #posts
-      = yield
+    = yield

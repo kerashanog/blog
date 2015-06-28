@@ -1,12 +1,15 @@
-- @posts.each do |post|
+= render 'header'
 
-  .post.text
-    .post-date
-      = link_to post do
-        = post.created_at.strftime("%b %d")
-        %br
-        = post.created_at.strftime("%Y")
-    %h3= link_to post.title, post
-    = markdown(post.body)
-  %footer.clearfix
+#posts
+  - @posts.each do |post|
+  
+    .post.text
+      .post-date
+        = link_to post do
+          = post.created_at.strftime("%b %d")
+          %br
+          = post.created_at.strftime("%Y")
+      %h3= link_to post.title, post
+      %p= post.body
+    %footer.clearfix
     

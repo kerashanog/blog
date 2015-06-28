@@ -1,3 +1,11 @@
-%h1 Edit Post
+%nav.menu
+  .wrapper
+    %h6.menu-title.show
+      = link_to root_path do
+        = image_tag 'logo64.jpg', alt: 'KeraS'
+        KeraS
 
-= render 'form'
+#posts.permalink-page
+  %h1 Edit Post
+  
+  = render 'form'
