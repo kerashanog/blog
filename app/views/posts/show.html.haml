@@ -22,5 +22,5 @@
       |
       = link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'}
       
-    %p= @post.body
+    %p= simple_format(@post.body)
     %footer.clearfix
